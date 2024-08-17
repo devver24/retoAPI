@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         const password = document.getElementById('password').value;
 
         try{
-            const res = await fetch('http://localhost:5000/api/auth/register',{
+            const res = await fetch('https://retoapi-r3qc.onrender.com/api/auth/register',{
                 method: 'POST',
                 headers:{
                     'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         const password = document.getElementById('loginPassword').value;
 
         try{
-            const res = await fetch('http://localhost:5000/api/auth/login',{
+            const res = await fetch('https://retoapi-r3qc.onrender.com/api/auth/login',{
                 method: 'POST',
                 headers:{
                     'Content-Type': 'application/json',
