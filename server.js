@@ -6,10 +6,16 @@ require('dotenv').config();
 const path = require('path')
 const app = express()
 
-//connectDB() 
+connectDB()
 
 app.use(cors())
 app.use(bodyParser.json())
+
+app.use(express.static(path.join(__dirname,'public')));
+
+app.get('/', (req,res)=>{
+    res.sendFile(path.join(__dirname,'public', 'index.html'))
+})
 
 app.use('/api/auth', require('./routes/auth'))
 
